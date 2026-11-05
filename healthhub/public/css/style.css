@@ -1,0 +1,86 @@
+/* Shared look of every HealthHub page. Owned by the team lead (Day 0). */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f6f9;
+    color: #1f2d3a;
+}
+
+/* Top navigation bar */
+.navbar {
+    background: #0b6e8a;
+    padding: 10px 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 14px;
+    align-items: center;
+}
+.navbar a { color: #ffffff; text-decoration: none; font-size: 14px; }
+.navbar a:hover { text-decoration: underline; }
+.navbar .brand { font-weight: bold; font-size: 18px; margin-right: 10px; }
+.navbar .spacer { flex: 1; }
+
+.container { max-width: 960px; margin: 20px auto; padding: 0 16px; }
+.card {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+h1 { margin-top: 0; font-size: 24px; }
+h2 { font-size: 18px; margin-top: 0; }
+
+/* Forms */
+.form-row { margin-bottom: 12px; }
+.form-row label { display: block; margin-bottom: 4px; font-weight: bold; font-size: 14px; }
+input, select, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #b8c4cc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.inline-form { display: flex; flex-wrap: wrap; gap: 10px; align-items: flex-end; }
+.inline-form .form-row { flex: 1 1 160px; margin-bottom: 0; }
+
+button, .button {
+    background: #0b6e8a;
+    color: #ffffff;
+    border: none;
+    padding: 9px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-block;
+}
+button:hover, .button:hover { background: #095a72; }
+button.danger { background: #c0392b; }
+button.secondary { background: #6c7a86; }
+.button.call { background: #1e8449; }
+
+/* Messages */
+.message { padding: 10px; border-radius: 4px; margin: 10px 0; display: none; }
+.message.success { display: block; background: #d4efdf; color: #1e6b3a; }
+.message.error { display: block; background: #fadbd8; color: #922b21; }
+.message.info { display: block; background: #d6eaf8; color: #1b4f72; }
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+th, td { text-align: left; padding: 8px; border-bottom: 1px solid #dde4ea; }
+th { background: #e8f1f5; }
+.table-wrap { overflow-x: auto; }
+
+.badge { padding: 2px 8px; border-radius: 10px; font-size: 12px; color: #ffffff; }
+.badge.green { background: #1e8449; }
+.badge.red { background: #c0392b; }
+.badge.orange { background: #d68910; }
+
+@media (max-width: 600px) {
+    h1 { font-size: 20px; }
+    .container { margin: 10px auto; }
+}

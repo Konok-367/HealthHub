@@ -1,0 +1,33 @@
+{
+  "name": "healthhub",
+  "version": "1.0.0",
+  "description": "HealthHub - Integrated Online Healthcare Management System (MVC, Node.js, Express, MySQL)",
+  "main": "server.js",
+  "directories": {
+    "doc": "docs",
+    "test": "tests"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "db:setup": "node scripts/setup-db.js",
+    "test": "vitest run",
+    "test:unit": "vitest run tests/unit",
+    "test:integration": "vitest run tests/integration",
+    "docs": "jsdoc -r config middleware utils models controllers routes -d docs/jsdoc"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "express-session": "^1.19.0",
+    "multer": "^2.5.0",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "jsdoc": "^4.0.5",
+    "supertest": "^7.3.1",
+    "vitest": "^5.1.0"
+  }
+}
