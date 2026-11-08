@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaccine and Anti-venom Search - HealthHub</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="container">
+        <div class="card">
+            <h1>Search Vaccines and Anti-venoms</h1>
+            <form id="searchForm" class="inline-form">
+                <div class="form-row"><label for="name">Name</label><input type="text" id="name" placeholder="e.g. Rabies"></div>
+                <div class="form-row">
+                    <label for="category">Type</label>
+                    <select id="category">
+                        <option value="">Vaccine and anti-venom</option>
+                        <option value="Vaccine">Vaccine</option>
+                        <option value="Anti-venom">Anti-venom</option>
+                    </select>
+                </div>
+                <div class="form-row"><label for="location">City or area</label><input type="text" id="location"></div>
+                <button type="submit">Search</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+        <div class="card" id="resultsCard" style="display:none">
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Name</th><th>Type</th><th>Hospital</th><th>Address</th><th>Phone</th><th>Availability</th><th></th></tr></thead>
+                    <tbody id="resultsBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script src="/js/vaccine.js"></script>
+</body>
+</html>
