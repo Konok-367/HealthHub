@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emergency Contacts - HealthHub</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="container">
+        <div class="card">
+            <h1>Emergency Contacts</h1>
+            <form id="searchForm" class="inline-form">
+                <div class="form-row"><label for="keyword">Hospital name, city or area</label><input type="text" id="keyword"></div>
+                <button type="submit">Search</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+        <div id="resultsBox"></div>
+
+        <div class="card" id="manageCard" style="display:none">
+            <h2 id="manageTitle">Add emergency contact (staff only)</h2>
+            <form id="manageForm">
+                <input type="hidden" id="contactId">
+                <div class="form-row" id="hospitalRow"><label for="hospitalId">Hospital</label><select id="hospitalId"></select></div>
+                <div class="form-row"><label for="emergencyHotline">Emergency hotline</label><input type="text" id="emergencyHotline"></div>
+                <div class="form-row"><label for="ambulanceNumber">Ambulance number</label><input type="text" id="ambulanceNumber"></div>
+                <div class="form-row"><label for="generalNumber">General number</label><input type="text" id="generalNumber"></div>
+                <button type="submit">Save</button>
+                <button type="button" class="secondary" id="resetForm">Clear</button>
+            </form>
+            <div id="manageMessage" class="message"></div>
+        </div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script src="/js/emergency.js"></script>
+</body>
+</html>
