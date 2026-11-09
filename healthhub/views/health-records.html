@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Health Records - HealthHub</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="container">
+        <div class="card">
+            <h1>Upload a health record</h1>
+            <form id="uploadForm">
+                <div class="form-row"><label for="title">Title *</label><input type="text" id="title" maxlength="100"></div>
+                <div class="form-row">
+                    <label for="category">Category *</label>
+                    <select id="category">
+                        <option>Lab Report</option>
+                        <option>Prescription</option>
+                        <option>X-Ray / Scan</option>
+                        <option>Vaccination</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="form-row"><label for="description">Description</label><textarea id="description" rows="2"></textarea></div>
+                <div class="form-row"><label for="recordFile">File (PDF, JPG, JPEG, PNG, max 5 MB) *</label><input type="file" id="recordFile" accept=".pdf,.jpg,.jpeg,.png"></div>
+                <button type="submit">Upload</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+        <div class="card">
+            <h2>My records</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead><tr><th>Title</th><th>Category</th><th>File</th><th>Uploaded</th><th></th></tr></thead>
+                    <tbody id="recordsBody"></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script src="/js/health-records.js"></script>
+</body>
+</html>
