@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Search - HealthHub</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="navbar"></div>
+    <div class="container">
+        <div class="card">
+            <h1>Hospital Search</h1>
+            <form id="searchForm" class="inline-form">
+                <div class="form-row"><label for="name">Hospital name</label><input type="text" id="name"></div>
+                <div class="form-row"><label for="city">City</label><input type="text" id="city"></div>
+                <div class="form-row"><label for="district">District</label><input type="text" id="district"></div>
+                <button type="submit">Search</button>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+        <div class="card" id="resultsCard" style="display:none">
+            <h2>Results</h2>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr><th>Name</th><th>City</th><th>Phone</th><th>Available beds</th><th>ICU beds</th><th></th></tr>
+                    </thead>
+                    <tbody id="resultsBody"></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="card" id="detailsCard" style="display:none">
+            <h2>Hospital details</h2>
+            <div id="detailsBox"></div>
+        </div>
+    </div>
+    <script src="/js/common.js"></script>
+    <script src="/js/hospital-search.js"></script>
+</body>
+</html>
